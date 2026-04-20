@@ -22,14 +22,14 @@ namespace QuoteMachine_ExerciceGit
         }
 
         /// <summary>
-        /// Retourne une citation aleatoire dans la liste des citations.
+        ///    
         /// </summary>
-        /// <returns>Une citation.</returns>
+        /// <returns></returns>
         public Quote GetRandomQuote()
         {
             Random rand = new Random();
-            int indexQuote = rand.Next(0, _quotes.Count);
-            return _quotes[indexQuote];
+            int index = rand.Next(0, _quotes.Count);
+            return _quotes[index];
         }
 
         public void AddQuote(string text, string author)
