@@ -16,7 +16,8 @@ namespace QuoteMachine_ExerciceGit
             {
                 new Quote { Text = "Le succès, c’est d’aller d’échec en échec sans perdre son enthousiasme.", Author = "Winston Churchill" },
                 new Quote { Text = "Soyez vous-même, tous les autres sont déjà pris.", Author = "Oscar Wilde" },
-                new Quote { Text = "La vie, c’est comme une bicyclette, il faut avancer pour ne pas perdre l’équilibre.", Author = "Albert Einstein" }
+                new Quote { Text = "La vie, c’est comme une bicyclette, il faut avancer pour ne pas perdre l’équilibre.", Author = "Albert Einstein" },
+                new Quote { Text = "Let me speak to your manager.", Author = "Karen" }
             };
         }
 
@@ -34,10 +35,10 @@ namespace QuoteMachine_ExerciceGit
         public void AddQuote(string text, string author)
         {
             //Avant de commencer, décommenter le test suivant:
-            //AddQuote_ShouldIncreaseQuoteCount
+            //AddQuote_ShouldIncreaseQuoteCount();
 
             //Avant de créer votre PR, faites un git rebase sur main pour vous assurer que vous avez la dernière version du code.
-            throw new NotImplementedException("À implémenter dans feature/add-quote");
+            _quotes.Add(new Quote { Text = text, Author = author });
         }
 
         public void SaveToCSVFile(string path)
