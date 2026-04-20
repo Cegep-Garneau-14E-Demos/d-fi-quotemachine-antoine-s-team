@@ -21,13 +21,15 @@ namespace QuoteMachine_ExerciceGit
             };
         }
 
+        /// <summary>
+        /// Retourne une citation aleatoire dans la liste des citations.
+        /// </summary>
+        /// <returns>Une citation.</returns>
         public Quote GetRandomQuote()
         {
-            //Avant de commencer, décommenter le test suivant:
-            //GetRandomQuote_ShouldReturnNonNullQuote
-
-            //Avant de créer votre PR, faites un git rebase sur main pour vous assurer que vous avez la dernière version du code.
-            throw new NotImplementedException("À implémenter dans feature/random-quote");
+            Random rand = new Random();
+            int indexQuote = rand.Next(0, _quotes.Count);
+            return _quotes[indexQuote];
         }
 
         public void AddQuote(string text, string author)
