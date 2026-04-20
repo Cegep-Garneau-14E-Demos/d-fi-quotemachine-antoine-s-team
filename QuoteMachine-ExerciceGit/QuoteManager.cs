@@ -32,10 +32,10 @@ namespace QuoteMachine_ExerciceGit
         public void AddQuote(string text, string author)
         {
             //Avant de commencer, décommenter le test suivant:
-            //AddQuote_ShouldIncreaseQuoteCount
+            //AddQuote_ShouldIncreaseQuoteCount();
 
             //Avant de créer votre PR, faites un git rebase sur main pour vous assurer que vous avez la dernière version du code.
-            throw new NotImplementedException("À implémenter dans feature/add-quote");
+            _quotes.Add(new Quote { Text = text, Author = author });
         }
 
         public void SaveToCSVFile(string path)
